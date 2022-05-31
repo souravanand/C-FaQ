@@ -8,6 +8,8 @@ virtually it will be like
 c-->B1
 c-->B2
 C------->A
+
+we tell compiler that we need only one instance of the class
 */
 
 #include<iostream>
