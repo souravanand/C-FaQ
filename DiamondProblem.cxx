@@ -7,6 +7,8 @@
            
                   Child
                   
+   Here we have 2 instances of Grand Father which creates ambiguity
+                  
   */
   #include<iostream>
 using namespace std;
