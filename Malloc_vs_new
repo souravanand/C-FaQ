@@ -1,0 +1,17 @@
+What are the differences between malloc and new ?
+
+Both are used to allocate dynamic memory allocation
+
+1)malloc is a function ->allocates memory from heap ->return void*
+
+while new is an operator, calls datatype constructor -> allocates memory from free store 
+return fully typed pointer
+
+2)To remove the allocated mmeory, for malloc we use free, which is again a function 
+while delete calls destrcutor and releases memory.
+
+3)On failure,malloc returns NULL while new throws exception .
+
+====================
+Heap-: dynamic memory area which is allocated/freed by malloc/free
+Free store-: dynamic memory area which is allocated/freed by new/delete
