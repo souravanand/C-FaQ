@@ -1,0 +1,43 @@
+Function pointer -:is a pointer variable that stores the address of the function.Typically address of starting instruction .
+
+void (*func_ptr)(int,int)=name of function whose address to be stored.
+
+It can be used to run  algo where decision is to be made at runt time.
+
+It can also be used to store function in array.
+
+void (*func_ptr[])(int,int)={func_name1,func_name2};
+
+
+#include<iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+void add (int a,int b)
+{
+    cout<<"Addition of "<<a<<" and "<<b<<" is "<<a+b<<endl;
+}
+void sub (int a,int b)
+{
+    cout<<"Subtraction of "<<a<<" and "<<b<<" is "<<a-b<<endl;
+}
+int main(int argc,char *argv[])
+{
+
+void (*func_ptr[])(int,int)={add,sub};
+if(argc!=4)
+{
+    cout<<"Invalid arguments"<<endl;
+    return 0;
+}
+if(strcmp(argv[1],"add")==0)
+{
+    func_ptr[0](stoi( argv[2] ),stoi(argv[3]));
+}
+else{
+func_ptr[1](stoi( argv[2] ),stoi(argv[3]));
+}
+
+
+}
