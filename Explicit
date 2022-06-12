@@ -1,0 +1,19 @@
+class String{
+
+public:
+
+String(int n);
+String(const char *p);
+
+}
+
+String m ='x';
+x will be converted into int implicitly,if we do not want the conversion,
+
+explicit String(int n)
+{
+}
+
+An explicit constructor is a function that does not get called in implicit type conversion
+
+
