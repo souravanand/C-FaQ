@@ -30,7 +30,7 @@ class complex{
 int main()
 {
    complex c1(3,8),c2(9,13),c3;
-   c3=c1+c2;
+   c3=c1+c2; // c1 called add function by passing c2 as argument and result is stored in c3
    c3.showdata();
     
     
