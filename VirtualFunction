@@ -1,0 +1,50 @@
+decision made due to object type rather than pointer type
+
+depending on object type, virtual points to vtable
+
+no vptr in derived class as it has one in base class
+
+vtable static array of pointers -:function pointer 
+
+vtable for class 
+=====
+-:vtable stands for virtual table created by complier at compile time .
+-:every class that has virtual function or a class that is derived from base class containing virtual function contains that table
+-: lookup table which is static  array in nature -: array of function pointer
+-:every vtable has vptr associated with it .Vptr points to vtable and is used to access function inside vtable 
+-:vptr is created for only base class and it is derived by derived class 
+
+when a class object is created , vptr is point to set to virtual table for that class	
+
+#include<iostream>
+using namespace std;
+
+class employee{
+    public:
+   virtual void raisesalary()
+    {
+        cout<<"salary will be raised by 5 %"<<endl;
+    }
+    void promote()
+    {
+        cout<<"emplyee will not be promoted for 2022-23"<<endl;
+    }
+};
+
+class engineer:public employee{
+    void raisesalary()
+    { 
+        cout<<"salary will be raised by 15 %"<<endl;
+
+    }
+};
+int main()
+{
+    employee* emp=new employee();
+    employee* eng=new engineer();
+    cout<<sizeof(emp)<<endl;
+    cout<<sizeof(eng)<<endl;
+    emp->raisesalary();
+    eng->raisesalary();
+
+}
