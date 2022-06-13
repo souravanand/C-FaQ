@@ -1,0 +1,8 @@
+Can virtual functions be inlined?
+
+Whenever a virtual function is called using a base class reference or pointer it cannot be inlined 
+because the call is resolved at runtime, but whenever called using the object (without reference or pointer) 
+of that class, can be inlined because the compiler knows the exact class of the object at compile time.
+
+
+Inline function is used to replace function calling location with 
