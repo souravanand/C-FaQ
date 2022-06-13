@@ -1,0 +1,25 @@
+Staic member variable are intialized to 0.
+It is initilized just once, only one copy 
+Throughout the program only one copy of static member variable are created for the entire class.
+Its lifetime is till the program ends.
+static member variable is declared inside the class and it does not belong to any object but to the whole class.
+can be accessed with or without object.hence it is known as class variable
+#include<iostream>
+using namespace std;
+
+class abc{
+    
+    public:
+    static int x;
+    abc()
+    {
+        cout<<"default"<<endl;
+    }
+};
+
+int abc::x=8;
+int main()
+{
+    abc a;
+    cout<<a.x;
+}
