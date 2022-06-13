@@ -48,3 +48,10 @@ int main()
     eng->raisesalary();
 
 }
+
+
+
+Is virtual constructor possible?
+The object exists only after the constructor ends.In order for the constructor to be dispatched using the virtual table , 
+there has to be an existing object with a pointer to the virtual table , 
+but how can a pointer to the virtual table exist if the object still doesn't exist
